@@ -18,11 +18,15 @@ class Log
 {
 
 public:
-	const int logLevelError = 0;
-	const int logLevelWarn = 1;
-	const int logLevelInfo = 2;
+	// enums by default assigns 32 bit (4 byte) integers to values starting from zero
+	// Here levelError is initialized to 0 just for readability
+	enum Level
+	{
+		levelError = 0, levelWarn, levelInfo
+	};
+
 private:
-	int m_logLevel = logLevelInfo;
+	int m_logLevel = levelInfo;
 
 public:
 	void setLevel(int level)
@@ -32,19 +36,19 @@ public:
 
 	void error(const char* message)
 	{
-		if (m_logLevel >= 0)
+		if (m_logLevel >= levelError)
 			std::cout << "[ERROR]: " << message << std::endl;
 	}
 
 	void warn(const char* message)
 	{
-		if (m_logLevel >= 1)
+		if (m_logLevel >= levelWarn)
 			std::cout << "[WARN]: " << message << std::endl;
 	}
 
 	void info(const char* message)
 	{
-		if (m_logLevel >= 2)
+		if (m_logLevel >= levelInfo)
 			std::cout << "[INFO]: " << message << std::endl;
 	}
 };

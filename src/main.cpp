@@ -7,5 +7,9 @@
 
 int main()
 {
-
+	Log log;
+	log.setLevel(log.levelWarn);
+	log.error("hello");
+	log.warn("hello");
+	log.info("hello");
 }
