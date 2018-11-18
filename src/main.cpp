@@ -1,15 +1,12 @@
-/**
- * Code demonstrating difference between struct and class
- */
+#include "constrdestr.cpp"
 
-#include <iostream>
-#include "log.cpp"
+void TestConstructDestruct()
+{
+	Entity e;
+	e.Print();
+}
 
 int main()
 {
-	Log log;
-	log.setLevel(log.levelWarn);
-	log.error("hello");
-	log.warn("hello");
-	log.info("hello");
+	TestConstructDestruct();
 }
