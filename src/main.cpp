@@ -1,10 +1,5 @@
-#include "constrdestr.cpp"
+#include "constrdestr.h"
 
-void TestConstructDestruct()
-{
-	Entity e;
-	e.Print();
-}
 
 int main()
 {

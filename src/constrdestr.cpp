@@ -3,6 +3,12 @@
  *	constructor / destructor example
  */
 
+/**
+ * Example usage:
+ *   include constrdestr.h in main
+ *	 call TestConstructDestruct(); from main();
+ */
+
 #include <iostream>
 
 class Entity
@@ -28,3 +34,9 @@ public:
 		std::cout << X << ", " << Y << std::endl;
 	}
 };
+
+void TestConstructDestruct()
+{
+	Entity e;
+	e.Print();
+}
